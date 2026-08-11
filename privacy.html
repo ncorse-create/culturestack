@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Privacy Policy — Culture Stack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What Culture Stack stores, what it never touches, and how to delete all of it.">
+<link rel="icon" href="./assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,400..700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="shell">
+
+<header class="masthead">
+  <div class="wrap masthead__row">
+    <a class="masthead__brand" href="./">
+      <img class="masthead__mark" src="./assets/icon.png" alt="">
+      Culture Stack
+    </a>
+    <nav class="masthead__nav">
+      <a href="./" class="opt">The app</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap wrap--narrow legal">
+<p class="eyebrow">Culture Stack</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective 28 July 2026</p>
+
+
+<div class="summary">
+  <h2>The short version</h2>
+  <ul>
+    <li><strong>Your library lives in your own iCloud account.</strong> We cannot see it.</li>
+    <li><strong>The social features are optional.</strong> Nothing is shared until you choose to sign in and follow someone.</li>
+    <li><strong>No analytics, no advertising, no trackers.</strong> There is no third-party tracking SDK in this app.</li>
+    <li><strong>We do not sell your data.</strong> Not to anyone, for any purpose.</li>
+    <li><strong>You can delete everything from inside the app</strong>, and it is actually deleted.</li>
+  </ul>
+</div>
+
+<h2>1. Who we are</h2>
+<p>
+  Culture Stack is published by <strong>Persue Apps LLC</strong> ("we", "us"). If you have a question
+  about this policy, about your data, or you want something removed, email
+  <a href="mailto:ncorse@icloud.com">ncorse@icloud.com</a>. A real person reads it.
+</p>
+
+<h2>2. Your library stays on your devices</h2>
+<p>
+  Everything you track — albums, games, books, films, shows, your ratings, notes, lists and
+  collection — is stored on your device and, if you have iCloud enabled, synced through
+  <strong>Apple's CloudKit private database</strong> under your own Apple Account.
+</p>
+<p>
+  That is your private iCloud storage. We have no access to it, no ability to read it, and no
+  server that receives it. If you turn iCloud off, your library simply stays local to the device.
+  Apple's handling of iCloud data is governed by
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.
+</p>
+
+<h2>3. The social features are opt-in</h2>
+<p>
+  Culture Stack has an optional social layer — a friend feed, reactions, comments, circles and
+  profiles. <strong>None of it runs until you sign in.</strong> If you never sign in, no account is
+  created and nothing about you leaves your device except the metadata lookups described in
+  section 4.
+</p>
+
+<h3>Signing in</h3>
+<p>
+  We use <strong>Sign in with Apple</strong>. Apple gives us an anonymous user identifier. If you
+  choose Apple's "Hide My Email" option, we never see your real email address. We do not request
+  your Apple Account password and never receive it.
+</p>
+
+<h3>What is stored when you use the social features</h3>
+<p>
+  This data is stored in <strong>Google Firebase (Cloud Firestore)</strong>, which acts as our data
+  processor. It is the only backend service that receives personal data from this app.
+</p>
+<div class="scroll">
+<table>
+  <tr><th>What</th><th>Why</th><th>Who can see it</th></tr>
+  <tr>
+    <td>Your display name, friend code, and profile photo if you add one</td>
+    <td>So friends can find and recognise you</td>
+    <td>Anyone you share your friend code with; people who follow you</td>
+  </tr>
+  <tr>
+    <td>Activity you publish — items you mark finished, rate or review, including the title,
+        creator, cover image address and your score</td>
+    <td>To build the friend feed</td>
+    <td>People who follow you</td>
+  </tr>
+  <tr>
+    <td>"Listening now" presence, while you have it enabled</td>
+    <td>To show friends what you are playing right now</td>
+    <td>People who follow you</td>
+  </tr>
+  <tr>
+    <td>Reactions and comments you leave</td>
+    <td>To show them on the post</td>
+    <td>People who can see that post</td>
+  </tr>
+  <tr>
+    <td>Who you follow and who follows you</td>
+    <td>To assemble your feed</td>
+    <td>You and the other person</td>
+  </tr>
+</table>
+</div>
+<p>
+  Your <em>whole library is never uploaded</em>. Only the specific items you publish an activity
+  for are sent. Private notes, unrated items and anything still sitting in your queue stay on your
+  device.
+</p>
+
+<h2>4. Looking up cover art and details</h2>
+<p>
+  When you add something or ask the app to fill in missing details, Culture Stack sends the
+  <strong>title or search term</strong> — and nothing about you — to whichever of these public
+  catalogues is relevant:
+</p>
+<ul>
+  <li>Apple iTunes Search, MusicBrainz, Deezer and Cover Art Archive — music</li>
+  <li>IGDB (via Twitch) and HowLongToBeat — games</li>
+  <li>Open Library — books</li>
+  <li>TMDB — films</li>
+  <li>TVmaze — television</li>
+</ul>
+<p>
+  These requests carry no account identifier, no device identifier and no advertising ID. Each
+  service will, like any web server, see the network request and your IP address, and each has its
+  own privacy policy. We do not send them anything else about you.
+</p>
+
+<h2>5. Device permissions</h2>
+<ul>
+  <li>
+    <strong>Apple Music</strong> — only if you grant it. Used to search the catalogue and play music
+    in the app. Your Apple Music activity is handled by Apple under Apple's policy; we do not
+    receive or store your listening history.
+  </li>
+  <li>
+    <strong>Camera</strong> — only used to scan a friend's QR code. Frames are processed on device
+    to read the code and are never saved, uploaded or sent anywhere.
+  </li>
+  <li>
+    <strong>Photos</strong> — only the single image you pick as a profile photo. Nothing else in
+    your library is read.
+  </li>
+  <li>
+    <strong>Notifications</strong> — reminders you schedule. These are generated on your device.
+  </li>
+</ul>
+
+<h2>6. What we deliberately do not do</h2>
+<ul>
+  <li>No analytics or telemetry SDK. We do not measure your taps, sessions or screens.</li>
+  <li>No advertising, ad networks or ad identifiers.</li>
+  <li>No cross-app or cross-site tracking. Nothing here feeds an advertising profile.</li>
+  <li>No selling, renting or trading of personal data — there is no circumstance in which we do this.</li>
+  <li>No third-party SDK that profiles you. Firebase is used solely as a database for the social features.</li>
+</ul>
+
+<h2>7. Purchases</h2>
+<p>
+  Culture Stack Pro is sold through Apple's In-App Purchase. <strong>Apple processes the
+  payment.</strong> We never see or store your card number, billing address or Apple Account
+  credentials. We receive only a signed receipt confirming that a valid purchase exists, which is
+  what unlocks Pro features on your devices.
+</p>
+
+<h2>8. Keeping and deleting your data</h2>
+<p>
+  Social data stays until you remove it. You are in control of all of it:
+</p>
+<ul>
+  <li><strong>Delete a post, comment or reaction</strong> — removed immediately.</li>
+  <li>
+    <strong>Delete your account</strong> — in the app, under your profile. This deletes your profile,
+    friend code, published activities, presence and follow relationships, and signs you out. It is
+    not recoverable.
+  </li>
+  <li>
+    <strong>Your library is separate.</strong> Deleting your social account does not touch it; it is
+    in your iCloud. Deleting the app removes the local copy.
+  </li>
+  <li>
+    <strong>Export</strong> — you can export your library from within the app at any time.
+  </li>
+</ul>
+<p>
+  Copies may persist briefly in routine encrypted backups after deletion, and are overwritten on
+  the normal backup cycle.
+</p>
+
+<h2>9. Your rights</h2>
+<p>
+  Depending on where you live — including under the GDPR in the UK and EEA, and the CCPA in
+  California — you have the right to access your data, correct it, delete it, obtain a portable
+  copy, and object to certain processing. The in-app export and delete-account tools give you
+  access, portability and erasure directly. For anything else, email
+  <a href="mailto:ncorse@icloud.com">ncorse@icloud.com</a> and we will respond within 30 days.
+</p>
+<p>
+  We have never sold or shared personal information as those terms are defined under the CCPA, so
+  there is nothing to opt out of.
+</p>
+
+<h2>10. Children</h2>
+<p>
+  Culture Stack is not directed to children under 13, and we do not knowingly collect personal
+  information from them. If you believe a child has created an account, email us and we will delete
+  it.
+</p>
+
+<h2>11. International transfers</h2>
+<p>
+  Our processors — Apple and Google — operate globally, so if you use the social features your data
+  may be processed in the United States. Both operate under standard contractual clauses and
+  equivalent safeguards for transfers out of the UK and EEA.
+</p>
+
+<h2>12. Security</h2>
+<p>
+  Traffic is encrypted in transit. Social data is protected by server-side rules that scope each
+  record to its owner — you can only write your own profile, your own activities and your own
+  reactions. Your library is protected by Apple's iCloud encryption. No system is perfect, and we
+  will not claim otherwise; if a breach ever affects your data we will tell you.
+</p>
+
+<h2>13. Changes</h2>
+<p>
+  If this policy changes materially we will update the effective date above and note the change in
+  the app. Continuing to use Culture Stack after a change means you accept the updated policy.
+</p>
+</main>
+
+<footer class="site">
+  <div class="wrap foot__grid">
+    <div>Persue Apps LLC · Culture Stack</div>
+    <div class="foot__links">
+      <a href="./">Home</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./support.html">Support</a>
+      <a href="mailto:ncorse@icloud.com">ncorse@icloud.com</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
