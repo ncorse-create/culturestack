@@ -2,293 +2,477 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Culture Stack — one queue for everything you mean to get to</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Culture Stack keeps the albums, games, books, films and shows you mean to get to in one place — with cover art, facets, a spin wheel for when you can't decide, and a quiet feed of what your friends finished.">
-<meta property="og:title" content="Culture Stack">
-<meta property="og:description" content="One queue for the music, games, books, films and shows you mean to get to.">
+<title>Culture Stack · One queue for everything you mean to get to</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Culture Stack keeps the albums, games, books, films and shows you mean to get to in one place, with a drifting mural of your own cover art, a spin for when you can't decide, scores out of ten and a small, quiet feed of friends. For iPhone, iPad and Mac.">
+<meta name="theme-color" content="#14181C">
+<meta property="og:title" content="Culture Stack · Everything you mean to get to">
+<meta property="og:description" content="Music, games, books, film and TV in one queue. Mural, Spin, scores out of ten and a feed of friends whose taste you trust.">
 <meta property="og:type" content="website">
-<link rel="icon" href="./assets/icon.png">
-<link rel="apple-touch-icon" href="./assets/icon.png">
+<meta property="og:url" content="https://ncorse-create.github.io/culturestack/">
+<meta property="og:image" content="https://ncorse-create.github.io/culturestack/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Culture Stack">
+<meta name="twitter:description" content="One queue for the music, games, books, films and shows you mean to get to.">
+<meta name="twitter:image" content="https://ncorse-create.github.io/culturestack/assets/og.png">
+<meta name="apple-itunes-app" content="app-id=6764145502">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,400..700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Culture Stack","operatingSystem":"iOS, iPadOS, macOS","applicationCategory":"EntertainmentApplication","publisher":{"@type":"Organization","name":"Persue Apps LLC"},"offers":[{"@type":"Offer","price":"0","priceCurrency":"USD"}]}
+</script>
 </head>
 <body>
-<div class="shell">
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
-  <div class="wrap masthead__row">
-    <a class="masthead__brand" href="./">
-      <img class="masthead__mark" src="./assets/icon.png" alt="">
-      Culture Stack
+<header class="nav" id="top">
+  <div class="wrap nav__row">
+    <a class="brand" href="./" aria-label="Culture Stack home">
+      <img src="./assets/icon.png" alt="" width="30" height="30">
+      <span>Culture Stack</span>
     </a>
-    <nav class="masthead__nav">
-      <a href="#what" class="opt">The app</a>
-      <a href="#pro" class="opt">Pro</a>
-      <a href="./privacy.html">Privacy</a>
-      <a href="./support.html">Support</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#mural">Mural</a>
+      <a href="#spin">Spin</a>
+      <a href="#scores">Scores</a>
+      <a href="#social">Social</a>
+      <a href="#pro">Pro</a>
+      <a href="#faq">FAQ</a>
     </nav>
+    <a class="btn btn--sm btn--accent" href="https://apps.apple.com/app/id6764145502">Coming soon</a>
   </div>
 </header>
 
-<main>
+<main id="main">
 
-  <!-- ---------------- hero ---------------- -->
-  <div class="wrap hero">
-    <div class="hero__grid">
-      <div>
-        <p class="eyebrow rise d1">Issue 01 · iPhone, iPad &amp; Mac</p>
-        <h1 class="display rise d2">
-          One queue for<br>everything you<br><em>mean to get to.</em>
-        </h1>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__mural" aria-hidden="true">
+    <div class="mrow" data-row="row-film-0" data-dir="-1" data-speed="70"></div>
+    <div class="mrow" data-row="row-music-1" data-dir="1" data-speed="80"></div>
+    <div class="mrow" data-row="row-tv2-0" data-dir="-1" data-speed="75"></div>
+    <div class="mrow" data-row="row-games-0" data-dir="1" data-speed="85"></div>
+  </div>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="pill reveal"><span class="dot"></span> Submitted to the App Store · iPhone, iPad &amp; Mac</p>
+      <h1 id="hero-title" class="reveal" data-delay="1">Everything you<br>mean to get&nbsp;to.</h1>
+      <p class="lede reveal" data-delay="2">The album a friend swore by. The game still in its shrinkwrap. The novel three people have recommended.
+        Culture Stack keeps music, games, books, film and TV in one beautiful queue, then helps you pick what's next.</p>
+      <div class="cta-row reveal" data-delay="3">
+        <a class="appstore" href="https://apps.apple.com/app/id6764145502" aria-label="Coming soon to the App Store">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.15.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.6-2.66 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.05-.51 2.68-1.28z"/></svg>
+          <span><small>Coming soon to the</small>App Store</span>
+        </a>
+        <a class="btn btn--ghost" href="#mural">See what's new</a>
       </div>
-      <div class="hero__stamp rise d3">
-        <span class="stamp">Five shelves · one app</span>
-      </div>
+      <ul class="hero__facts reveal" data-delay="4">
+        <li><strong>5</strong> shelves</li>
+        <li><strong>10</strong>-point scores</li>
+        <li><strong>0</strong> trackers</li>
+      </ul>
     </div>
 
-    <div class="hero__sub rise d3">
-      <p class="lede">
-        The album a friend swore by. The game still in its shrinkwrap. The novel three
-        people have now recommended. Culture Stack holds all of it in one place — with
-        cover art, real metadata, and a way to decide what's next.
-      </p>
-    </div>
-
-    <div class="hero__cta rise d4">
-      <a class="btn btn--solid" href="#what">See how it works</a>
-      <a class="btn btn--ghost" href="#pro">What Pro adds</a>
+    <div class="hero__phones" aria-label="Culture Stack on iPhone">
+      <figure class="phone phone--back phone--l" data-parallax="-0.08">
+        <img src="./assets/app/detail-album.webp" alt="An album detail page with Start Listening and Skip buttons" width="660" height="1434" loading="eager">
+      </figure>
+      <figure class="phone phone--front tilt" data-parallax="0.06">
+        <img src="./assets/app/mural-music.webp" alt="The music queue with its drifting cover-art mural at the top" width="660" height="1434" fetchpriority="high">
+      </figure>
+      <figure class="phone phone--back phone--r" data-parallax="-0.12">
+        <img src="./assets/app/library2.webp" alt="The TV library as a poster grid" width="660" height="1434" loading="eager">
+      </figure>
     </div>
   </div>
+</section>
 
+<!-- ============ SHELVES ============ -->
+<section class="shelves" aria-label="The five shelves">
   <div class="wrap">
-    <div class="channels rise d5">
-      <div class="channel" style="--c: var(--ch-music)">
-        <span class="channel__dot"></span>
-        <p class="channel__name">Music</p>
-        <p class="channel__meta">Albums · Artists</p>
-      </div>
-      <div class="channel" style="--c: var(--ch-games)">
-        <span class="channel__dot"></span>
-        <p class="channel__name">Games</p>
-        <p class="channel__meta">Platform · Series</p>
-      </div>
-      <div class="channel" style="--c: var(--ch-books)">
-        <span class="channel__dot"></span>
-        <p class="channel__name">Books</p>
-        <p class="channel__meta">Author · Pages</p>
-      </div>
-      <div class="channel" style="--c: var(--ch-film)">
-        <span class="channel__dot"></span>
-        <p class="channel__name">Film</p>
-        <p class="channel__meta">Director · Runtime</p>
-      </div>
-      <div class="channel" style="--c: var(--ch-tv)">
-        <span class="channel__dot"></span>
-        <p class="channel__name">TV</p>
-        <p class="channel__meta">Episodes · Networks</p>
-      </div>
+    <div class="shelf-grid">
+      <a class="shelf reveal" href="#mural" data-cat="music" style="--c:var(--music)">
+        <span class="shelf__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="17" cy="16" r="3" fill="currentColor"/></svg></span>
+        <strong>Music</strong><span>Albums, artists, credits</span>
+      </a>
+      <a class="shelf reveal" data-delay="1" href="#mural" data-cat="games" style="--c:var(--games)">
+        <span class="shelf__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 11v3M5.5 12.5h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="11.5" r="1.2" fill="currentColor"/><circle cx="18" cy="14" r="1.2" fill="currentColor"/></svg></span>
+        <strong>Games</strong><span>Platforms, series, studios</span>
+      </a>
+      <a class="shelf reveal" data-delay="2" href="#mural" data-cat="books" style="--c:var(--books)">
+        <span class="shelf__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 6v13.5" stroke="currentColor" stroke-width="2"/></svg></span>
+        <strong>Books</strong><span>Authors, series, pages</span>
+      </a>
+      <a class="shelf reveal" data-delay="3" href="#mural" data-cat="film" style="--c:var(--film)">
+        <span class="shelf__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4" stroke="currentColor" stroke-width="2"/></svg></span>
+        <strong>Film</strong><span>Directors, runtimes, where to watch</span>
+      </a>
+      <a class="shelf reveal" data-delay="4" href="#mural" data-cat="tv" style="--c:var(--tv)">
+        <span class="shelf__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 2l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <strong>TV</strong><span>Seasons, episodes, networks</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MURAL ============ -->
+<section id="mural" class="mural-sec" aria-labelledby="mural-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span class="new">New</span> The Mural</p>
+      <h2 id="mural-title">Your queue, hung on the wall.</h2>
+      <p class="lede">Every queue now opens on a slowly drifting wall of its own cover art. Equal panels laid like brickwork, each row
+        offset by half a panel and gliding calmly in the opposite direction to the one above. It's your backlog,
+        made from the things in it, and it changes with every shelf.</p>
     </div>
   </div>
 
-  <!-- ---------------- what it is ---------------- -->
-  <section id="what">
-    <div class="wrap">
-      <div class="two-col">
-        <div>
-          <p class="eyebrow">§ 01 — The app</p>
-          <h2 class="section-title">A backlog that finally looks like something.</h2>
-          <p class="lede">
-            Five sections, one location. Whatever you're tracking — queue it up the same way,
-            browse the same way, and review them the same way. No need to balance different
-            approaches for all your favorite things.
-          </p>
-        </div>
+  <div class="mural-stage reveal" data-delay="1">
+    <div class="mural-tabs" role="tablist" aria-label="Choose a shelf">
+      <button role="tab" aria-selected="true" data-shelf="music" style="--c:var(--music)">Music</button>
+      <button role="tab" aria-selected="false" data-shelf="games" style="--c:var(--games)">Games</button>
+      <button role="tab" aria-selected="false" data-shelf="books" style="--c:var(--books)">Books</button>
+      <button role="tab" aria-selected="false" data-shelf="film" style="--c:var(--film)">Film</button>
+      <button role="tab" aria-selected="false" data-shelf="tv" style="--c:var(--tv)">TV</button>
+    </div>
+    <div class="mural-wall" id="muralWall" aria-hidden="true"></div>
+    <div class="wrap mural-detail">
+      <figure class="phone phone--mural tilt">
+        <img id="muralShot" src="./assets/app/mural-music.webp" alt="The Music queue in Culture Stack, opening on a mural of album covers" width="660" height="1434" loading="lazy">
+      </figure>
+      <ul class="mural-points">
+        <li class="reveal"><h3>Made of your shelf</h3><p>Album squares for music and games, posters for film, TV and books. The wall is built from whatever you queued, nothing stock.</p></li>
+        <li class="reveal" data-delay="1"><h3>Calm by design</h3><p>A slow, clock-driven drift, softened at the edges. It pauses when you leave the screen and holds perfectly still with Reduce Motion or Low Power Mode on.</p></li>
+        <li class="reveal" data-delay="2"><h3>Ready on launch</h3><p>Covers for every shelf are prefetched to disk after launch, so switching from Music to TV never shows an empty wall.</p></li>
+        <li class="reveal" data-delay="3"><h3>Then the queue</h3><p>Scroll and the mural gives way to your queue: what's on deck, the next episode, the order you set by hand.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        <div class="features">
-          <div class="feature">
-            <div class="feature__no">01</div>
-            <div>
-              <h3>Queue</h3>
-              <p>Everything waiting, sorted how you think about it — by year, decade, genre, artist,
-                platform, author, director or the place you heard about it.</p>
-            </div>
+<!-- ============ QUEUE & LIBRARY ============ -->
+<section class="split" aria-labelledby="queue-title">
+  <div class="wrap split__grid">
+    <div class="split__media">
+      <figure class="phone tilt reveal" data-parallax="0.05"><img src="./assets/app/mural-tv2.webp" alt="The TV queue showing the next episode for each show in progress" width="660" height="1434" loading="lazy"></figure>
+      <figure class="phone phone--offset tilt reveal" data-delay="2" data-parallax="-0.06"><img src="./assets/app/library.webp" alt="The Library grid with filters for Queued, Watching, Watched and Parked" width="660" height="1434" loading="lazy"></figure>
+    </div>
+    <div class="split__copy">
+      <p class="eyebrow reveal">Queue &amp; Library</p>
+      <h2 id="queue-title" class="reveal">One backlog. Sorted the way you think.</h2>
+      <p class="lede reveal">Queue what you mean to get to, browse what you've finished, and slice both by the details that matter for each medium.</p>
+      <ul class="checks reveal">
+        <li>Facets by year, decade, genre, scene, artist, platform, author, director or where you heard about it</li>
+        <li>Drag your queue into a manual order, with the next pick marked <em>on deck</em></li>
+        <li>TV knows your next episode and tracks every season</li>
+        <li>Cover art, credits and metadata filled in automatically from public catalogues</li>
+        <li>Where to listen, watch, play or read, right on the detail page</li>
+        <li>Lists for a year-end ten, a director's run, or the stack a friend handed you</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPIN ============ -->
+<section id="spin" class="spin-sec" aria-labelledby="spin-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--center reveal">
+      <p class="eyebrow">Spin</p>
+      <h2 id="spin-title">Can't decide? Spin.</h2>
+      <p class="lede">Each shelf has its own spin, built to feel like the thing it picks. Music drops a record on a platter. Games whip a
+        carousel of cases past you. Books flip through a stack. Film pulls a strip through a projector gate. TV surfs channels in a burst of static.</p>
+    </div>
+
+    <div class="spin-demo reveal" data-delay="1">
+      <div class="spin-tabs" role="tablist" aria-label="Spin a shelf">
+        <button role="tab" aria-selected="true" data-spin="music" style="--c:var(--music)">Music</button>
+        <button role="tab" aria-selected="false" data-spin="games" style="--c:var(--games)">Games</button>
+        <button role="tab" aria-selected="false" data-spin="books" style="--c:var(--books)">Books</button>
+        <button role="tab" aria-selected="false" data-spin="film" style="--c:var(--film)">Film</button>
+        <button role="tab" aria-selected="false" data-spin="tv" style="--c:var(--tv)">TV</button>
+      </div>
+      <div class="spin-window" id="spinWindow">
+        <div class="spin-record" aria-hidden="true"></div>
+        <div class="spin-track" id="spinTrack"></div>
+        <div class="spin-static" aria-hidden="true"></div>
+      </div>
+      <div class="spin-result" aria-live="polite">
+        <p class="spin-result__label" id="spinStyle">Record platter</p>
+        <p class="spin-result__pick" id="spinPick">Tap spin to pick tonight's album</p>
+      </div>
+      <button class="btn btn--accent btn--lg" id="spinBtn" type="button">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Spin
+      </button>
+      <p class="spin-note">Pro adds spin filters: narrow the wheel to a decade, genre, network, platform or list.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCORES ============ -->
+<section id="scores" class="split split--rev" aria-labelledby="scores-title">
+  <div class="wrap split__grid">
+    <div class="split__copy">
+      <p class="eyebrow reveal">Scores out of ten</p>
+      <h2 id="scores-title" class="reveal">Say what you thought, while you still remember.</h2>
+      <p class="lede reveal">Finish something, give it a score from 1 to 10, and write a line about it. Your ratings build a profile of your taste across every shelf, and match it with friends'.</p>
+
+      <div class="score-card reveal" data-delay="1">
+        <div class="score-card__top">
+          <img src="./assets/covers/c38.webp" alt="" width="60" height="90" loading="lazy">
+          <div>
+            <p class="score-card__title">Fleabag</p>
+            <p class="score-card__meta">TV · Season 2 · Watched</p>
           </div>
-          <div class="feature">
-            <div class="feature__no">02</div>
-            <div>
-              <h3>Browse</h3>
-              <p>Your finished shelf, faceted the same way, with scores, notes and the artwork
-                pulled automatically from public catalogues.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature__no">03</div>
-            <div>
-              <h3>Spin</h3>
-              <p>For the nights you can't decide. Pull the lever and the app picks something out of
-                your own queue.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature__no">04</div>
-            <div>
-              <h3>Feed</h3>
-              <p>A quiet timeline of what the people you follow actually finished — no counts to
-                chase, no algorithm.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature__no">05</div>
-            <div>
-              <h3>Lists</h3>
-              <p>Build your own — a year-end ten, a run through a top director’s catalog, the stack a friend
-                handed you.</p>
-            </div>
+          <div class="score-badge" aria-live="polite"><span id="scoreValue" class="count" data-to="9">0</span><small>/10</small></div>
+        </div>
+        <div class="score-picker" role="radiogroup" aria-label="Your score">
+          <button role="radio" aria-checked="false">1</button><button role="radio" aria-checked="false">2</button><button role="radio" aria-checked="false">3</button><button role="radio" aria-checked="false">4</button><button role="radio" aria-checked="false">5</button><button role="radio" aria-checked="false">6</button><button role="radio" aria-checked="false">7</button><button role="radio" aria-checked="false">8</button><button role="radio" aria-checked="true">9</button><button role="radio" aria-checked="false">10</button>
+        </div>
+        <p class="score-card__note">"The confession booth scene. That's the whole review."</p>
+      </div>
+
+      <div class="stats reveal" data-delay="2">
+        <div><span class="count" data-to="6314">0</span><small>items logged</small></div>
+        <div><span class="count" data-to="5733">0</span><small>in the queue</small></div>
+        <div><span class="count" data-to="7.0" data-dec="1">0</span><small>average score</small></div>
+      </div>
+      <p class="fineprint reveal">Numbers from a real test library on Culture Stack's You tab.</p>
+    </div>
+    <div class="split__media">
+      <figure class="phone tilt reveal" data-parallax="0.05"><img src="./assets/app/you2.webp" alt="The You tab showing highest-rated items on every shelf" width="660" height="1434" loading="lazy"></figure>
+      <figure class="phone phone--offset tilt reveal" data-delay="2" data-parallax="-0.05"><img src="./assets/app/detail-film.webp" alt="A film detail page with Start Watching and Skip" width="660" height="1434" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL ============ -->
+<section id="social" class="social-sec" aria-labelledby="social-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--center reveal">
+      <p class="eyebrow">Social</p>
+      <h2 id="social-title">A feed for people whose taste you trust.</h2>
+      <p class="lede">No algorithm. No strangers. No engagement bait. Follow a handful of people, see what they're into right now,
+        and read what they actually wrote. It's opt-in, and your circle stays small on purpose.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card card--feed reveal tilt">
+        <header class="card__head"><span class="tag">Feed</span><h3>What friends finished</h3></header>
+        <ul class="feed">
+          <li><span class="av" style="--h:24">JR</span><div><p><b>Jordan</b> scored <b>Ironman</b></p><p class="muted">Ghostface Killah · 2h</p><p class="quote">Still the best Wu solo record. Fight me.</p></div><span class="mini-score">9</span><img src="./assets/covers/c04.webp" alt="" width="54" height="54" loading="lazy"></li>
+          <li><span class="av" style="--h:280">MK</span><div><p><b>Mina</b> started playing <b>Dirt 5</b></p><p class="muted">PlayStation 5 · 5h</p></div><span class="mini-score mini-score--live">Now</span><img src="./assets/covers/c18.webp" alt="" width="54" height="54" loading="lazy"></li>
+          <li><span class="av" style="--h:150">AS</span><div><p><b>Aisha</b> finished <b>The Grace of Kings</b></p><p class="muted">Ken Liu · Yesterday</p><p class="quote">Slow first act, then it does not let go.</p></div><span class="mini-score">8</span><img class="tall" src="./assets/covers/c45.webp" alt="" width="40" height="60" loading="lazy"></li>
+        </ul>
+      </article>
+
+      <article class="card card--poll reveal tilt" data-delay="1">
+        <header class="card__head"><span class="tag" style="--c:var(--games)">Polls</span><h3>Settle it in the thread</h3></header>
+        <p class="poll__q">Which do we start next Friday?</p>
+        <div class="poll">
+          <div class="poll__opt" style="--p:58%"><span>Hannibal</span><b>58%</b></div>
+          <div class="poll__opt" style="--p:27%"><span>Still Game</span><b>27%</b></div>
+          <div class="poll__opt" style="--p:15%"><span>Inside Job</span><b>15%</b></div>
+        </div>
+        <p class="muted small">Discussion posts, polls and shared lists, right in the feed.</p>
+      </article>
+
+      <article class="card card--circle reveal tilt" data-delay="2">
+        <header class="card__head"><span class="tag" style="--c:var(--books)">Circles</span><h3>Read along, privately</h3></header>
+        <div class="circle-row">
+          <img class="tall" src="./assets/covers/c47.webp" alt="" width="64" height="96" loading="lazy">
+          <div class="circle-prog">
+            <p><b>Sunday Book Club</b> · The Sword of Kaigen</p>
+            <div class="prog"><span style="--w:72%"></span><em>Sam · 72%</em></div>
+            <div class="prog"><span style="--w:45%"></span><em>Noah · 45%</em></div>
+            <div class="prog"><span style="--w:90%"></span><em>Rae · 90%</em></div>
           </div>
         </div>
+        <p class="muted small">Buddy circles keep a small group on the same book, season or game, with progress and chat. (Pro)</p>
+      </article>
+
+      <article class="card card--share reveal tilt" data-delay="1">
+        <header class="card__head"><span class="tag" style="--c:var(--tv)">Library sharing</span><h3>Browse a friend's shelves</h3></header>
+        <div class="share-covers">
+          <img src="./assets/covers/c24.webp" alt="" loading="lazy"><img src="./assets/covers/c34.webp" alt="" loading="lazy"><img src="./assets/covers/c39.webp" alt="" loading="lazy"><img src="./assets/covers/c31.webp" alt="" loading="lazy">
+        </div>
+        <div class="match"><span class="match__ring" style="--m:86"><b class="count" data-to="86">0</b>%</span><p><b>Taste match</b> with Rae, across her full library.</p></div>
+        <p class="muted small">Opt in to a public library and friends can browse every shelf, with reviews on each release page.</p>
+      </article>
+
+      <article class="card card--recap reveal tilt" data-delay="2">
+        <header class="card__head"><span class="tag" style="--c:var(--film)">Recap</span><h3>Your Sunday wrap-up</h3></header>
+        <div class="recap">
+          <div><span class="count" data-to="4">0</span><small>finished</small></div>
+          <div><span class="count" data-to="11">0</span><small>episodes</small></div>
+          <div><span class="count" data-to="8.5" data-dec="1">0</span><small>avg score</small></div>
+        </div>
+        <p class="muted small">A weekly recap of what you finished, with a Monday notification that opens the card. (Pro)</p>
+      </article>
+    </div>
+    <p class="fineprint center">Feed, poll, circle and sharing cards above are illustrations of real app features; the names are examples.</p>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<section class="marquee-sec" aria-label="Cover art from real Culture Stack libraries">
+  <div class="marquee" data-dir="1"><div class="marquee__track" id="mq1"></div></div>
+  <div class="marquee" data-dir="-1"><div class="marquee__track" id="mq2"></div></div>
+</section>
+
+<!-- ============ DETAILS ============ -->
+<section class="details-sec" aria-labelledby="details-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Detail pages</p>
+      <h2 id="details-title">Every item gets the page it deserves.</h2>
+    </div>
+    <div class="shots" id="shots">
+      <figure class="shot reveal"><div class="phone phone--sm tilt"><img src="./assets/app/detail-book.webp" alt="Book detail for Star Wars: Lost Stars" width="660" height="1434" loading="lazy"></div><figcaption><b style="color:var(--books)">Books</b> Start Reading, series, pages and ISBN</figcaption></figure>
+      <figure class="shot reveal" data-delay="1"><div class="phone phone--sm tilt"><img src="./assets/app/detail-game.webp" alt="Game detail for Zone of the Enders: The 2nd Runner Mars" width="660" height="1434" loading="lazy"></div><figcaption><b style="color:var(--games)">Games</b> Platforms, publisher, series and where to play</figcaption></figure>
+      <figure class="shot reveal" data-delay="2"><div class="phone phone--sm tilt"><img src="./assets/app/detail-tv2.webp" alt="TV detail for One Piece" width="660" height="1434" loading="lazy"></div><figcaption><b style="color:var(--tv)">TV</b> Mark watched, back to queue, or skip</figcaption></figure>
+      <figure class="shot reveal" data-delay="3"><div class="phone phone--sm tilt"><img src="./assets/app/tv-episodes.webp" alt="Episode checklist for a long-running show" width="660" height="1434" loading="lazy"></div><figcaption><b style="color:var(--tv)">Episodes</b> Every season, every episode, ticked off</figcaption></figure>
+      <figure class="shot reveal" data-delay="4"><div class="phone phone--sm tilt"><img src="./assets/app/spin.webp" alt="The Spin tab: stack filters, then spin" width="660" height="1434" loading="lazy"></div><figcaption><b style="color:var(--accent)">Spin</b> Stack filters, then spin</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="privacy-sec" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--center reveal">
+      <p class="eyebrow">Privacy</p>
+      <h2 id="privacy-title">Your library is yours.</h2>
+    </div>
+    <div class="principles">
+      <div class="principle reveal"><span class="p-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19.5 10 4 4 0 0 1 18 18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3>In your iCloud</h3><p>Synced through Apple's private CloudKit database under your own Apple Account. There's no server of ours holding your collection.</p></div>
+      <div class="principle reveal" data-delay="1"><span class="p-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5.6 5.6l12.8 12.8" stroke="currentColor" stroke-width="2"/></svg></span><h3>No trackers</h3><p>Not a single analytics or advertising SDK ships in the app. Nothing you do here feeds an ad profile anywhere.</p></div>
+      <div class="principle reveal" data-delay="2"><span class="p-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.6.8 2.6 2.6 3 5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Social is opt-in</h3><p>Nothing is published until you sign in and choose to share. No account is needed to use the app.</p></div>
+      <div class="principle reveal" data-delay="3"><span class="p-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Export anytime</h3><p>Take your whole library with you whenever you want. It's your data, in a file you can open.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVICES ============ -->
+<section class="devices-sec" aria-labelledby="devices-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--center reveal">
+      <p class="eyebrow">iPhone · iPad · Mac</p>
+      <h2 id="devices-title">Native everywhere you are.</h2>
+      <p class="lede">One SwiftUI app, built for each screen. Not a web page in a wrapper.</p>
+    </div>
+    <div class="devices">
+      <div class="device reveal"><div class="dev dev--phone"><img src="./assets/app/mural-film.webp" alt="" loading="lazy"></div><h3>iPhone</h3><p>One-handed queue, spin and score, with the mural up top.</p></div>
+      <div class="device reveal" data-delay="1"><div class="dev dev--pad"><img src="./assets/app/band-tv.webp" alt="" loading="lazy"></div><h3>iPad</h3><p>Two-pane detail and spin for wide windows, and adaptive grids.</p></div>
+      <div class="device reveal" data-delay="2"><div class="dev dev--mac"><img src="./assets/app/band-games.webp" alt="" loading="lazy"><span class="dev__stand"></span></div><h3>Mac</h3><p>A real Mac sidebar, a Lists row and full keyboard navigation.</p></div>
+    </div>
+    <p class="fineprint center">Everything syncs between your devices through iCloud. iPad and Mac frames show mural artwork, not full app screens.</p>
+  </div>
+</section>
+
+<!-- ============ PRO ============ -->
+<section id="pro" class="pro-sec" aria-labelledby="pro-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--center reveal">
+      <p class="eyebrow">Pricing</p>
+      <h2 id="pro-title">Free, and honest about it.</h2>
+      <p class="lede">The free version is a complete app: all five shelves, unlimited items, full cover art, the mural, the whole spin and the social feed. Pro is there when you want more.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <p class="plan__name">Free</p>
+        <p class="plan__price">$0</p>
+        <p class="plan__note">Forever, not a trial.</p>
+        <ul class="checks checks--sm">
+          <li>Five shelves, unlimited items</li><li>Mural, queue, library and lists</li><li>Spin for every shelf</li><li>Scores, notes and the feed</li><li>iCloud sync across devices</li>
+        </ul>
+      </div>
+      <div class="plan plan--pick reveal" data-delay="1">
+        <span class="plan__tag">Best value</span>
+        <p class="plan__name">Pro Lifetime</p>
+        <p class="plan__price">$29.99</p>
+        <p class="plan__note">Pay once. Every Pro feature on every device you sign in to.</p>
+        <ul class="checks checks--sm">
+          <li>Bulk import from Notes, CSV, Discogs, Last.fm or RYM</li><li>Apple Music playback inside the app</li><li>Spin filters</li><li>Recap, stats and the Sunday wrap-up</li><li>Buddy circles</li><li>Collection tracking and every theme</li>
+        </ul>
+      </div>
+      <div class="plan reveal" data-delay="2">
+        <p class="plan__name">Pro Monthly</p>
+        <p class="plan__price">$1.99<span>/mo</span></p>
+        <p class="plan__note">Every Pro feature. Auto-renews until cancelled; cancel any time in Settings.</p>
+        <ul class="checks checks--sm">
+          <li>Everything in Lifetime</li><li>Try Pro without committing</li>
+        </ul>
       </div>
     </div>
-  </section>
+    <p class="fineprint center">Prices in USD. Subscriptions are billed through your Apple Account.</p>
+  </div>
+</section>
 
-  <!-- ---------------- mockups ---------------- -->
-  <section class="section--rule">
-    <div class="wrap">
-      <p class="eyebrow">§ 02 — On the phone</p>
-      <div class="stage">
-        <figure class="phone phone--l">
-          <img src="./assets/shots/tv.jpg" alt="The TV queue, showing the next episode of each show in progress" loading="lazy" width="660" height="1434">
-        </figure>
-        <figure class="phone phone--c">
-          <img src="./assets/shots/queue.jpg" alt="The music queue, with the next album marked on deck" loading="lazy" width="660" height="1434">
-        </figure>
-        <figure class="phone phone--r">
-          <img src="./assets/shots/film.jpg" alt="The film library as a poster grid with scores" loading="lazy" width="660" height="1434">
-        </figure>
-      </div>
+<!-- ============ FAQ ============ -->
+<section id="faq" class="faq-sec" aria-labelledby="faq-title">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head sec-head--center reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Questions, answered.</h2>
     </div>
-  </section>
-
-  <!-- ---------------- principles ---------------- -->
-  <section class="section--rule">
-    <div class="wrap">
-      <div class="two-col">
-        <div>
-          <p class="eyebrow">§ 03 — How it behaves</p>
-          <h2 class="section-title">Yours, on your devices.</h2>
-        </div>
-        <div class="features">
-          <div class="feature">
-            <div class="feature__no">A</div>
-            <div>
-              <h3>Your library is in your iCloud</h3>
-              <p>Synced through Apple's private CloudKit database under your own Apple Account.
-                There is no server of ours holding your collection, because there is no server.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature__no">B</div>
-            <div>
-              <h3>Social is opt-in and small</h3>
-              <p>Nothing is published until you sign in and follow someone. Your queue, your notes
-                and your unrated items never leave the device.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature__no">C</div>
-            <div>
-              <h3>No analytics, no trackers</h3>
-              <p>Not a single tracking SDK ships in the app. Nothing you do here feeds an
-                advertising profile anywhere.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature__no">D</div>
-            <div>
-              <h3>iPhone, iPad and Mac</h3>
-              <p>A native app on all three — not a web page in a wrapper — with a real Mac
-                sidebar and keyboard navigation.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="faq">
+      <details class="reveal"><summary>When can I download Culture Stack?</summary><p>Culture Stack has been submitted to the App Store for iPhone, iPad and Mac. It's coming soon; the App Store link on this page will work the day it's approved.</p></details>
+      <details class="reveal"><summary>Do I need an account?</summary><p>No. Your library works without signing in and syncs through your own iCloud. You only sign in with Apple if you want the social features.</p></details>
+      <details class="reveal"><summary>What is the Mural?</summary><p>It's the drifting wall of cover art at the top of each queue, built from the items on that shelf. It stays still if you turn on Reduce Motion or Low Power Mode.</p></details>
+      <details class="reveal"><summary>Where does the cover art and metadata come from?</summary><p>Public catalogues, including the Apple iTunes Search API, MusicBrainz, Open Library, TVmaze and TMDB, plus game databases. You can edit any field yourself.</p></details>
+      <details class="reveal"><summary>Can I import my existing lists?</summary><p>Yes. With Pro you can bulk-import a list from Notes or a CSV export from Discogs, Last.fm or RYM.</p></details>
+      <details class="reveal"><summary>Who can see my activity?</summary><p>Only people you approve to follow you, and only what you choose to share. Your queue, notes and unrated items stay private unless you opt in to a public library.</p></details>
+      <details class="reveal"><summary>How do I cancel Pro Monthly?</summary><p>In Settings, tap your name, then Subscriptions, then Culture Stack Pro. Lifetime is a one-time purchase and never renews.</p></details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ---------------- pricing ---------------- -->
-  <section id="pro" class="section--rule">
-    <div class="wrap">
-      <p class="eyebrow">§ 04 — Pricing</p>
-      <div class="two-col">
-        <div>
-          <h2 class="section-title">Generous free version. Pro model when you want more.</h2>
-          <p class="lede">
-            All five sections, unlimited items, full artwork and metadata, the queue, browse, spin,
-            lists, the whole social layer and iCloud sync are free. Forever, not for a trial.
-          </p>
-          <p class="free-note">Make a one-time purchase, or try the subscription if you’re just not sure yet.</p>
-        </div>
-
-        <div>
-          <div class="plans">
-            <div class="plan">
-              <p class="plan__name">Monthly</p>
-              <p class="plan__price">$1.99<span> / mo</span></p>
-              <p class="plan__note">Auto-renews until cancelled. Cancel any time in Settings.</p>
-            </div>
-            <div class="plan plan--pick">
-              <span class="plan__tag">One time</span>
-              <p class="plan__name">Lifetime</p>
-              <p class="plan__price">$29.99</p>
-              <p class="plan__note">Pay once. Every Pro feature, on every device you sign in to.</p>
-            </div>
-          </div>
-
-          <ul class="checks">
-            <li>Bulk import from Notes, CSV and catalogue exports</li>
-            <li>Apple Music playback inside the app</li>
-            <li>Every theme, not just Liner Notes</li>
-            <li>Spin filters — narrow the wheel to a decade, genre or list</li>
-            <li>Recap and stats, including the Sunday wrap-up</li>
-            <li>Buddy circles</li>
-            <li>Collection tracking for what you own</li>
-            <li>Full data export</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ---------------- close ---------------- -->
-  <section class="section--rule">
-    <div class="wrap wrap--narrow" style="text-align:center">
-      <p class="eyebrow" style="justify-content:center">Coming to the App Store</p>
-      <h2 class="section-title" style="font-size:clamp(2.1rem,5.4vw,3.6rem)">
-        Stop losing the recommendation.
-      </h2>
-      <p class="lede" style="margin: 0 auto 28px">
-        Culture Stack is in final review for iPhone, iPad and Mac. Want the link the day it lands?
-      </p>
-      <a class="btn btn--solid" href="mailto:ncorse@icloud.com?subject=Culture%20Stack%20launch">Email us</a>
-    </div>
-  </section>
+<!-- ============ CTA ============ -->
+<section class="cta-sec" aria-labelledby="cta-title">
+  <div class="cta-mural" aria-hidden="true">
+    <div class="mrow" data-row="row-books-1" data-dir="1" data-speed="80"></div>
+    <div class="mrow" data-row="row-tv-0" data-dir="-1" data-speed="70"></div>
+    <div class="mrow" data-row="row-music-2" data-dir="1" data-speed="90"></div>
+  </div>
+  <div class="wrap wrap--narrow cta-inner reveal">
+    <img src="./assets/icon.png" alt="" width="84" height="84" class="cta-icon">
+    <h2 id="cta-title">Stop losing the recommendation.</h2>
+    <p class="lede">Culture Stack is coming soon to the App Store for iPhone, iPad and Mac.</p>
+    <a class="appstore appstore--lg" href="https://apps.apple.com/app/id6764145502" aria-label="Coming soon to the App Store">
+      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.15.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.6-2.66 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.05-.51 2.68-1.28z"/></svg>
+      <span><small>Coming soon to the</small>App Store</span>
+    </a>
+  </div>
+</section>
 
 </main>
 
-<footer class="site">
+<footer class="foot">
   <div class="wrap foot__grid">
-    <div>Persue Apps LLC · Culture Stack</div>
-    <div class="foot__links">
+    <div class="foot__brand">
+      <img src="./assets/icon.png" alt="" width="28" height="28">
+      <div><b>Culture Stack</b><span>© 2026 Persue Apps LLC</span></div>
+    </div>
+    <nav class="foot__links" aria-label="Legal and support">
       <a href="./privacy.html">Privacy</a>
       <a href="./terms.html">Terms</a>
       <a href="./support.html">Support</a>
       <a href="mailto:ncorse@icloud.com">ncorse@icloud.com</a>
-    </div>
+    </nav>
   </div>
+  <p class="wrap foot__credit">Cover art shown is from real Culture Stack libraries and belongs to its respective owners. Apple, the Apple logo, iPhone, iPad and Mac are trademarks of Apple Inc. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
 </footer>
 
-</div>
+<script src="./site.js" defer></script>
 </body>
 </html>
